@@ -1,0 +1,258 @@
+
+<div class="row bg-light">
+    <!-- <div class="col-sm-1"></div> -->
+    <div class="col-sm-10">
+        <div class="col-sm-3"></div>
+<div class="col-sm-6 text-center">
+ <div class="alert alert-success col-sm-10" *ngIf="registrationsuccess;else failmessage">
+   <strong>{{registrationsuccess}} !!</strong>
+ </div>
+ <ng-template #failmessage>
+   <div class="alert alert-danger" *ngIf="regisfail">
+     <strong>{{regisfail}} !!</strong>
+   </div>
+ </ng-template>
+</div>
+<div class="col-sm-3"></div>
+        <div class="container mt-3">
+
+            <form class="form-horizontal" [formGroup]="EmpRegisterForm">
+                <div class="form-group">
+                    <label for="userName" class="col-sm-3 control-label">User Name *</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="userName" formControlName="username" placeholder="User Name" class="form-control"  autofocus>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="userName" class="col-sm-3 control-label">First Name *</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="userName" formControlName="username" placeholder="First Name" class="form-control"  autofocus>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="userName" class="col-sm-3 control-label">Last Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="userName" formControlName="username" placeholder="Last Name" class="form-control"  autofocus>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password *</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" formControlName="password" placeholder="Password" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email * </label>
+                    <div class="col-sm-9">
+                        <input type="email" formControlName="mail" id="email" placeholder="mail" class="form-control" name= "email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Gender</label>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="maleRadio" name="gender" value="Male" formControlName="gender">Male
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" checked id="femaleRadio" name="gender" formControlName="gender" value="Female">Female
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" checked id="otherRadio" name="gender" formControlName="gender" value="Other">Other
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber" class="col-sm-3 control-label">Primary Phone *</label>
+                    <div class="col-sm-9">
+                        <input type="tel" id="phoneNumber" formControlName="mobile" placeholder="Phone number" class="form-control">
+                        <span class="help-block">Your phone number won't be disclosed anywhere </span>
+                    </div>
+                </div>
+                              
+                <div class="form-group">
+                    <label for="nationality" class="col-sm-3 control-label">DOB *</label>
+                    <div class="col-sm-9">
+                        <input type="date" id="dob" formControlName="dob"  class="form-control"   >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="col-sm-3 control-label">Address</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="address" formControlName="address"  class="form-control" value="English" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="city" class="col-sm-3 control-label">City</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="city" formControlName="city" placeholder="City" class="form-control" >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="city" class="col-sm-3 control-label">State</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="state" formControlName="state" placeholder="State" class="form-control" >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="zip" class="col-sm-3 control-label">Zip Code</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="zip" formControlName="zip" placeholder="ZIP" class="form-control" >
+                    </div>
+                </div>
+                <br>
+                <br>
+                <h3> Driving Experience</h3>
+                <div class="form-group">
+                    <label for="exp" class="col-sm-3 control-label">Total Experience </label>
+                    <div class="col-sm-9">
+                        <input type="number" id="exp" formControlName="experience" placeholder="Exp. In Years" class="form-control">
+                    </div>
+                </div>
+                
+                <br>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Driver Type</label>
+                    <div class="col-sm-9">
+                    <select name="drivertype" id="drivertype" formControlName="drivertype">
+                        <option value="Any" selected>-Any-</option>
+                        <option value="Team">Team Driver</option>
+                        <option value="OverTheRoad">Over the Road</option>
+                        <option value="Dedicated">Dedicated</option>
+                        <option value="OwnerOperator">Owner Operator</option>
+                        <option value="Regional">Regional</option>
+                        <option value="ReeferTruck">Reefer Truck</option>
+                        <option value="ComapnyDriver">Comapny Driver</option>
+                    </select>
+                </div>
+                </div>
+
+                <br>
+                <div class="form-group">
+                 <label class="control-label col-sm-9">1) Are you a recent graduate from a CDL school or have a current CDL? *</label>
+                 <div class="col-sm-6">
+                     <div class="row">
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input type="radio" required="required" id="cdlyesRadio" formControlName="cdlStatus" name="cdlStatus" value="Yes" >Yes
+                             </label>
+                         </div>
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input type="radio" id="cdlnoRadio" name="cdlStatus" formControlName="cdlStatus" value="No">No
+                             </label>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+               
+             <div class="form-group">
+                 <label class="control-label col-sm-9">2) Have you ever failed or refused a DOT drug screen? *</label>
+                 <div class="col-sm-6">
+                     <div class="row">
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input type="radio" required="required" id="dotyesRadio" formControlName="dotStatus" name="dotStatus" value="Yes" >Yes
+                             </label>
+                         </div>
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input type="radio" id="dotnoRadio" name="dotStatus" formControlName="dotStatus" value="No" >No
+                             </label>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="form-group">
+                 <label class="control-label col-sm-9">3) Have you had a DUI or DWI in the last 5 years? *</label>
+                 <div class="col-sm-6">
+                     <div class="row">
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input required="required" input type="radio"  id="duiyesRadio" formControlName="duiStatus" name="duiStatus" value="Yes" >Yes
+                             </label>
+                         </div>
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input type="radio" id="duinoRadio" name="duiStatus" formControlName="duiStatus" value="No">No
+                             </label>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="form-group">
+                 <label class="control-label col-sm-9">4) Do you have any traffic or CSA violations in the last 3 years? *</label>
+                 <div class="col-sm-6">
+                     <div class="row">
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input type="radio" required="required" id="csayesRadio" formControlName="csaStatus" name="csaStatus" value="Yes" >Yes
+                             </label>
+                         </div>
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input type="radio" id="csanoRadio" name="csaStatus" formControlName="csaStatus" value="No" >No
+                             </label>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="form-group">
+                 <label class="control-label col-sm-9">5) Have you been involved in any accidents or incidents in the last 3 years? *</label>
+                 <div class="col-sm-6">
+                     <div class="row">
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input type="radio" required="required" id="accyesRadio" formControlName="accidentsStatus" name="accidentsStatus" value="Yes" >Yes
+                             </label>
+                         </div>
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input type="radio" id="accnoRadio" name="accidentsStatus" formControlName="accidentsStatus" value="No" >No
+                             </label>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="form-group">
+                 <label class="control-label col-sm-9">6) How many preventable accidents and incidents have you had in the last 3 years? *</label>
+                 <div class="col-sm-6">
+                     <div class="row">
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input type="radio" required="required" id="noaccyesRadio" formControlName="noaccStatus" name="noaccStatus" value="Yes" >Yes
+                             </label>
+                         </div>
+                         <div class="col-sm-4">
+                             <label class="radio-inline">
+                                 <input type="radio" id="noaccnoRadio" name="noaccStatus" formControlName="noaccStatus" value="No" >No
+                             </label>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+
+                <button type="submit" class="btn btn-primary"  (click)="registeremployee()">Register</button>
+            </form> <!-- /form -->
+        </div>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
