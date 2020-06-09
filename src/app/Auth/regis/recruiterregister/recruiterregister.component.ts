@@ -16,9 +16,10 @@ export class RecruiterregisterComponent implements OnInit {
   regisserver:any;
   ngOnInit() {
     this.RecruiterRegisterForm=this.fb.group({
+      username: ['',Validators.required],
       companyName: ['',Validators.required],
       contact: ['',Validators.required],
-      companyMail:['',Validators.compose([Validators.required,Validators.email])],
+      email:['',Validators.compose([Validators.required,Validators.email])],
       password: ['',Validators.compose([Validators.required,Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})"),Validators.minLength(8)])],
       location:['',Validators.required],
       About: ['',Validators.required]
@@ -35,7 +36,7 @@ export class RecruiterregisterComponent implements OnInit {
               this.router.navigate(['/login/rec_login']);
             }, 3000);
         }else{
-          this.regisfail='You are already a job Giver';
+          this.regisfail='Please fill all the Mandatory fields';
           console.log(this.regisfail);
         }
       },

@@ -18,35 +18,35 @@
 
             <form class="form-horizontal" [formGroup]="EmpRegisterForm">
                 <div class="form-group">
-                    <label for="userName" class="col-sm-3 control-label">User Name *</label>
+                    <label for="userName" class="col-sm-3 control-label">User Name*</label>
                     <div class="col-sm-9">
                         <input type="text" id="userName" formControlName="username" placeholder="User Name" class="form-control"  autofocus>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="userName" class="col-sm-3 control-label">First Name *</label>
+                    <label for="firstName" class="col-sm-3 control-label">First Name*</label>
                     <div class="col-sm-9">
-                        <input type="text" id="userName" formControlName="username" placeholder="First Name" class="form-control"  autofocus>
+                        <input type="text" id="firstname" formControlName="firstname" placeholder="First Name" class="form-control"  autofocus>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="userName" class="col-sm-3 control-label">Last Name</label>
+                    <label for="lastName" class="col-sm-3 control-label">Last Name</label>
                     <div class="col-sm-9">
-                        <input type="text" id="userName" formControlName="username" placeholder="Last Name" class="form-control"  autofocus>
+                        <input type="text" id="lastname" formControlName="lastname" placeholder="Last Name" class="form-control"  autofocus>
                     </div>
                 </div>
 
 
                 <div class="form-group">
-                    <label for="password" class="col-sm-3 control-label">Password *</label>
+                    <label for="password" class="col-sm-3 control-label">Password*</label>
                     <div class="col-sm-9">
                         <input type="password" id="password" formControlName="password" placeholder="Password" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="col-sm-3 control-label">Email * </label>
+                    <label for="email" class="col-sm-3 control-label">Email* </label>
                     <div class="col-sm-9">
                         <input type="email" formControlName="mail" id="email" placeholder="mail" class="form-control" name= "email">
                     </div>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="phoneNumber" class="col-sm-3 control-label">Primary Phone *</label>
+                    <label for="phoneNumber" class="col-sm-3 control-label">Primary Phone*</label>
                     <div class="col-sm-9">
                         <input type="tel" id="phoneNumber" formControlName="mobile" placeholder="Phone number" class="form-control">
                         <span class="help-block">Your phone number won't be disclosed anywhere </span>
@@ -82,13 +82,13 @@
                 </div>
                               
                 <div class="form-group">
-                    <label for="nationality" class="col-sm-3 control-label">DOB *</label>
+                    <label for="nationality" class="col-sm-3 control-label">DOB*</label>
                     <div class="col-sm-9">
                         <input type="date" id="dob" formControlName="dob"  class="form-control"   >
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="address" class="col-sm-3 control-label">Address</label>
+                    <label for="address" class="col-sm-3 control-label">Address*</label>
                     <div class="col-sm-9">
                         <input type="text" id="address" formControlName="address"  class="form-control" value="English" >
                     </div>
@@ -147,7 +147,7 @@
                      <div class="row">
                          <div class="col-sm-4">
                              <label class="radio-inline">
-                                 <input type="radio" required="required" id="cdlyesRadio" formControlName="cdlStatus" name="cdlStatus" value="Yes" >Yes
+                                 <input type="radio" id="cdlyesRadio" formControlName="cdlStatus" name="cdlStatus" value="Yes" >Yes
                              </label>
                          </div>
                          <div class="col-sm-4">
@@ -165,7 +165,7 @@
                      <div class="row">
                          <div class="col-sm-4">
                              <label class="radio-inline">
-                                 <input type="radio" required="required" id="dotyesRadio" formControlName="dotStatus" name="dotStatus" value="Yes" >Yes
+                                 <input type="radio" id="dotyesRadio" formControlName="dotStatus" name="dotStatus" value="Yes" >Yes
                              </label>
                          </div>
                          <div class="col-sm-4">
@@ -183,7 +183,7 @@
                      <div class="row">
                          <div class="col-sm-4">
                              <label class="radio-inline">
-                                 <input required="required" input type="radio"  id="duiyesRadio" formControlName="duiStatus" name="duiStatus" value="Yes" >Yes
+                                 <input type="radio"  id="duiyesRadio" formControlName="duiStatus" name="duiStatus" value="Yes" >Yes
                              </label>
                          </div>
                          <div class="col-sm-4">
@@ -201,7 +201,7 @@
                      <div class="row">
                          <div class="col-sm-4">
                              <label class="radio-inline">
-                                 <input type="radio" required="required" id="csayesRadio" formControlName="csaStatus" name="csaStatus" value="Yes" >Yes
+                                 <input type="radio" id="csayesRadio" formControlName="csaStatus" name="csaStatus" value="Yes" >Yes
                              </label>
                          </div>
                          <div class="col-sm-4">
@@ -219,7 +219,7 @@
                      <div class="row">
                          <div class="col-sm-4">
                              <label class="radio-inline">
-                                 <input type="radio" required="required" id="accyesRadio" formControlName="accidentsStatus" name="accidentsStatus" value="Yes" >Yes
+                                 <input type="radio"  id="accyesRadio" formControlName="accidentsStatus" name="accidentsStatus" value="Yes" >Yes
                              </label>
                          </div>
                          <div class="col-sm-4">
@@ -237,7 +237,7 @@
                      <div class="row">
                          <div class="col-sm-4">
                              <label class="radio-inline">
-                                 <input type="radio" required="required" id="noaccyesRadio" formControlName="noaccStatus" name="noaccStatus" value="Yes" >Yes
+                                 <input type="radio" id="noaccyesRadio" formControlName="noaccStatus" name="noaccStatus" value="Yes" >Yes
                              </label>
                          </div>
                          <div class="col-sm-4">

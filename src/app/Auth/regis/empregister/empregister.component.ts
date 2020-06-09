@@ -22,7 +22,7 @@ export class EmpregisterComponent implements OnInit {
       lastname: [''],
       password: ['',Validators.compose([Validators.required,Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})"),Validators.minLength(8)])],
       mail:['',Validators.compose([Validators.required,Validators.email])],
-      gender: [''],
+      gender: ['',Validators.required],
       mobile: ['',Validators.required],
       dob: ['',Validators.required],
       address: ['',Validators.required],
@@ -30,13 +30,13 @@ export class EmpregisterComponent implements OnInit {
       state: ['',Validators.required],
       zip: ['',Validators.required],
       experience: [''],
-      drivertype: ['',Validators.required],
-      cdlStatus: ['',Validators.required],
-      dotStatus: ['',Validators.required],
-      duiStatus: ['',Validators.required],
-      csaStatus: ['',Validators.required],
-      accidentsStatus: ['',Validators.required],
-      noaccStatus: ['',Validators.required]
+      drivertype: [''],
+      cdlStatus: [''],
+      dotStatus: [''],
+      duiStatus: [''],
+      csaStatus: [''],
+      accidentsStatus: [''],
+      noaccStatus: [''],
 
       });
   }
@@ -52,7 +52,7 @@ export class EmpregisterComponent implements OnInit {
               this.router.navigate(['/login/emp_login']);
             }, 3000);
         }else{
-          this.regisfail='You are already a job seeker';
+          this.regisfail='Please fill all the mandatory fields!!';
           console.log(this.regisfail);
         }
       },

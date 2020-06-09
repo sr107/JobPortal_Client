@@ -12,21 +12,6 @@
         <li class="nav-item">
             <a routerLink="/seeker/eprofile" class="nav-link p-3"> <i class="fa fa-briefcase"></i>Profile</a>
           </li>
-        <!-- <li class="nav-item">
-            <a routerLink="/login/emp_login" class="nav-link p-3" > <i class="fa fa-lock"></i> LOGIN</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="/register/emp_register" class="nav-link p-3 " ><i class="fa fa-address-book" aria-hidden="true"></i>REGISTER</a>
-          </li> -->
-        <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle p-3"  id="navbardrop" data-toggle="dropdown" style="cursor: pointer;">
-              <i class="fa fa-user"></i>Hi, {{username}}
-            </a>
-            <div class="dropdown-menu dropdown-menu-right bg-light">
-              <a class="dropdown-item p-2" (click)="gotoprofilepage()" style="cursor: pointer;">Profile</a>
-              <a class="dropdown-item p-2" (click)="logoutemployee()" style="cursor: pointer;">LOGOUT</a>
-            </div>
-          </li> -->
       </ul>
     </nav>
 </div>
@@ -42,7 +27,7 @@
         
          
         <div class="col-sm-12 form-group">
-          <label for="username"><b>UserName:</b></label><br>
+          <label for="username"><b>User Name:</b></label><br>
           <input type="text" name="username" formControlName="username" id="username" class="form-control" value={{profileinfo.username}}
             >
         </div>
@@ -64,8 +49,8 @@
             >
         </div>
         <div class="col-sm-12 form-group">
-          <label for="mstatus"><b>MaritalStatus:</b></label><br>
-          <input type="text" name="mstatus" id="mstatus" formControlName="maritalStatus" class="form-control" value={{profileinfo.maritalStatus}}
+          <label for="mstatus"><b>Date Of Birth:</b></label><br>
+          <input type="text" name="dob" id="dob" formControlName="dob" class="form-control" value={{profileinfo.dob}}
             >
         </div>
         <div class="col-sm-12 form-group">

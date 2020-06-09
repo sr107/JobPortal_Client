@@ -5,9 +5,11 @@ import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './Auth/login/login.component';
+import {LoginComponent } from './Auth/login/login.component';
 import {ForseekerService} from './forseeker.service';
 import {ForrecruiterService} from './forrecruiter.service';
+
+
 //import { SearchComponent } from './seeker/search/search.component';
 //import { EditprofileComponent } from './seeker/editprofile/editprofile.component';
 //import { PostjobComponent } from './recruiter/rdashboard/postjob/postjob.component';
@@ -28,6 +30,9 @@ import {ForrecruiterService} from './forrecruiter.service';
     NavbarComponent,
     routingComponents,
     LoginComponent,
+
+
+
    // SearchComponent,
     //EditprofileComponent,
     //PostjobComponent,

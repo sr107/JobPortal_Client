@@ -17,6 +17,8 @@ import {PostjobComponent} from './recruiter/postjob/postjob.component';
 import { RecruiterregisterComponent } from './Auth/regis/recruiterregister/recruiterregister.component';
 import {EditprofileComponent} from './seeker/editprofile/editprofile.component';
 import {SearchComponent} from './seeker/search/search.component';
+
+
 const routes: Routes = [
   {path:'',redirectTo:'login/emp_login',pathMatch:'full'}, 
   //for default pageload..
@@ -30,6 +32,8 @@ const routes: Routes = [
     {path:'emp_register',component:EmpregisterComponent},
     {path:'rec_register',component:RecruiterregisterComponent}
   ]},
+
+
   {path:'dashboard',component:DashboardComponent,children:[
   {path:'jobs',component:JobsComponent},
   {path:'appliedjobs',component:AppliedjobsComponent}, 
@@ -47,8 +51,8 @@ const routes: Routes = [
   },
   {
     path:'recruiter/postjob',component:PostjobComponent
-  }
-  
+  },
+
 ];
 
 @NgModule({
@@ -72,5 +76,5 @@ export const routingComponents=[RegisComponent,
                                 RprofileComponent,
                                 PostjobComponent,
                                 EditprofileComponent,
-                                SearchComponent
+                                SearchComponent,
                               ];

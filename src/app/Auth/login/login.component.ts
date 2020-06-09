@@ -21,4 +21,6 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['rec_login'],{relativeTo:this.activatedroute});
     this.tabset=true;
   }
+
 }
+
